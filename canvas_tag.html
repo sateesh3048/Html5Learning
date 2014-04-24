@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Welcome to canvas tag</title>
+  </head>
+  <body>
+    <canvas id="fill_rect"></canvas>
+    <canvas id="fill_text"></canvas>
+    <script type="text/javascript">
+      var canvas = document.getElementById("fill_rect");
+      var context = canvas.getContext("2d");
+      context.fillStyle="blue";
+      context.fillRect(10,20,200,100);
+      context.strokeStyle="#fa00ff";
+      context.lineWidth=5;
+      context.lineCap='round';
+      context.arc(50,50,20,0,Math.PI,false);
+      context.stroke();
+      canvas.onclick=function(){
+        window.location = canvas.toDataURL("image/png");
+      };
+      var canvas1 = document.getElementById("fill_text");
+      var context1 = canvas1.getContext("2d");
+      context1.font = "30px Arial";
+      context1.fillText("Hello World", 80, 80);
+    </script>
+  </body>
+</html>

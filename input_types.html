@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Html5 input types</title>
+  </head>
+  <body>
+    <form id="form1" action="/user">
+      <!--<div class="group">
+        <label>OneTimePassword</label>
+        <input type="text" name="one_time_password" size="35" required placeholder=" Please Enter one time password!" autofocus pattern="#[a-fA-F0-9]{6}" 
+        title="Enter one tiem password here"
+        autocomplete="on" />
+      </div>
+      <div class="group">
+        <label>GoogleSearch</label>
+        <input type="search" name="google_search" required/>
+      </div>
+      <div class="group">
+        <label>Fruits</label>
+        <input type="text" name="fruit" list="fruits" multiple >
+        <datalist id="fruits">
+          <select name="fruits">
+            <option value="apple">Apple</option>
+            <option value="banana">Banan</option>
+            <option value="grapes">Grapes</option>
+            <option value="sapota">Sapota</option>
+          </select>
+        </datalist>
+      </div>
+      <div class="group">
+        <p>
+          <label>NormalEmail</label>
+          <input type="email" name="NormalEmail"/>
+        </p>
+        <p>
+          <label>RequiredEmail</label>
+          <input type="email" name="RequiredEmail" required/>
+        </p>
+        <p>
+          <label>CustomersWebSiteUrl</label>
+          <input type="url" name="CustomersWebSiteUrl" required/>
+        </p>
+        <p>
+          <label>EnterTelephoneNumber</label>
+          <input type="tel" name="TelephoneNumber" required/>
+        </p>
+        <p>
+          <label>Age</label>
+          <input type="number" name="age" min="18" max="100" step=1 value=25>
+        </p>
+        <p>
+          <lable>price</lable>
+          <input type="range" name="price" onchange="showPrice(this.value)" />
+          <span id="show_price"></span>
+        </p>
+        <p>
+          <label>CurrentDate</label>
+          <input type="date" name="dob" id="dob"/>
+        </p>
+        <p>
+          <label>CurrentMonth</label>
+          <input type="month" name="current_month"/>
+        </p>
+        <p>
+          <label>CurrentWeek</label>
+          <input type="week" name="current_week"/>
+        </p>
+        <p>
+          <label>Choose Current Time</label>
+          <input type="time" name="current_time"/>
+        </p>  
+        <p>
+          <label>Choose Date and Time</label>
+          <input type="datetime" name="bdaytime"/>
+        </p>
+        <p>
+          <label>Choose Local Date and Time</label>
+          <input type="datetime-local" name="bdaylocaltime"/>
+        </p>
+        <p>
+          <label>Choose Security</label>
+          <keygen name="security"/>
+        </p>
+           
+        <p>
+          <label>Choose color</label>
+          <input type="color" name="current_color"/>
+        </p>
+        <p>
+          <label>ChooseBrowser</label>
+          <input list="browsers"/>
+          <datalist id="browsers">
+            <option value="InternetExplorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Safari">
+            <option value="Opera">
+          </datalist>
+        </p>-->     
+        <p>
+          <input type="submit">
+          <input type="submit" formaction="/admin" value="admin">
+        </p>
+      </div>
+    </form>
+    Form1: <input type="text" form="form1" name="sort_input" />
+    <script type="text/javascript">
+      function showPrice(new_value){
+        var price = document.getElementById("show_price").innerHTML = new_value;
+      }
+    </script>
+  </body>
+</html>

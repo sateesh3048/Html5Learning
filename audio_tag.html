@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to output element</title>
+  </head>
+  <body>
+    <button onclick="play_video()">PlayVideo</button>
+    <button onclick="pause_video()">PauseVide</button>
+    <button onclick="start_from_first()">StartFromFirst</button>
+    <button onclick="change_video()">ChangeVideo</button>
+    <p> Audio Properties</p>
+    <button onclick="enable_autoplay()">EnabelAutoPlay</button>
+    <button onclick="disable_autoplay()">DisabelAutoPlay</button>
+    <button onclick="autoplay_status()">CheckAutoPlayStatus</button>
+    <button onclick="get_buffered_details()">GetBufferedAudioDetails</button>
+    <button onclick="enable_controls()">EnabelControls</button>
+    <button onclick="disable_controls()">DisabelControls</button>
+    <button onclick="controls_status()">ControlsStatus</button>
+    <button onclick="get_current_source_details()">GetCurrentSourceDetails</button>
+    <button onclick="get_current_time_of_playing_video()">GetCurrentTime</button>
+    <button on
+    <p>
+      <audio id="my_audio" controls>
+        <source id="sample_audio_src" src="parugu.mp3" type="audio/mpeg"></source>
+      </audio>
+    </p>
+    <p>
+      Result Details:<div id="result"></div>
+    </p>
+    <script type="text/javascript">
+      var my_audio = document.getElementById("my_audio");
+      
+      /* for playing the video */
+      function play_video(){
+        my_audio.play();
+      };
+      
+      /* for pause the video */
+      function pause_video(){
+        my_audio.pause();
+      };
+
+      function start_from_first(){
+        my_audio.load();
+        my_audio.play();
+      }
+
+      function change_video(){
+        var sample_audio_src = document.getElementById("sample_audio_src");
+        sample_audio_src.src = "srirastu.mp3";
+        my_audio.load();
+        my_audio.play();
+      }
+    /* ########################################################################### */
+     var result = document.getElementById("result");
+      function enable_autoplay(){
+        my_audio.autoplay=true;
+        my_audio.load();
+      }
+
+      function disable_autoplay(){
+        my_audio.autoplay=false;
+        my_audio.load();
+      }
+     
+      function autoplay_status(){
+        result.innerHTML="Auto Play Status is "+my_audio.autoplay;;
+      }
+
+      function get_buffered_details(){
+        var audio_buffered = my_audio.buffered
+        console.log("get_buffered_details");
+        console.log(my_audio.buffered);
+        result.innerHTML="Buffered audio Start time is "+ audio_buffered.start(0) + "\n Buffered audio end time is " + audio_buffered.end(0) 
+      }
+
+      function enable_controls(){
+        my_audio.controls = true;
+         my_audio.load();
+      }
+
+      function disable_controls(){
+        my_audio.controls = false;
+         my_audio.load();
+      }
+
+      function controls_status(){
+         result.innerHTML="Current controls status is " + my_audio.controls;
+      }
+
+      function get_current_source_details(){
+        result.innerHTML="Current source details are "+ my_audio.currentSrc; 
+      }
+    </script>
+  </body>
+</html>

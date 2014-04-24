@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to output element</title>
+  </head>
+  <body>
+    <br>
+    <button onclick="play_video()">PlayVideo</button>
+    <button onclick="pause_video()">PauseVide</button>
+    <button onclick="changeVideo()">ChangeVideo</button>
+    <video width="320" height="240" id="video_sample1">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support this format.
+    </video>
+    <script type="text/javascript">
+      var my_video = document.getElementById("video_sample1");
+      /* for playing the video */
+      function play_video(){
+        console.log("from play video");
+        console.log(my_video);
+        my_video.play();
+      };
+      /* for pause the video */
+      function pause_video(){
+        console.log("Pause Video");
+        console.log(my_video);
+        my_video.pause();
+      };
+    </script>
+  </body>
+</html>
